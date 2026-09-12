@@ -1,0 +1,2143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Priyanka Padhi | Business Analyst & Product Strategist</title>
+
+  <meta
+    name="description"
+    content="Priyanka Padhi — Business Analyst, Product Strategist, Data & Transformation Professional with 8+ years of experience."
+  />
+
+  <style>
+    /* =========================================================
+       DESIGN SYSTEM
+    ========================================================= */
+
+    :root {
+      --background: #f5f5f7;
+      --surface: #ffffff;
+      --surface-soft: rgba(255, 255, 255, 0.76);
+      --surface-dark: #111111;
+
+      --text: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-light: #86868b;
+
+      --blue: #0071e3;
+      --blue-hover: #0077ed;
+      --purple: #6e5ce6;
+      --green: #28a745;
+
+      --border: rgba(0, 0, 0, 0.08);
+
+      --shadow-sm:
+        0 2px 12px rgba(0, 0, 0, 0.04);
+
+      --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08);
+
+      --radius-sm: 16px;
+      --radius-md: 24px;
+      --radius-lg: 32px;
+      --radius-xl: 42px;
+
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+      color: var(--text);
+      background:
+        radial-gradient(
+          circle at 10% 5%,
+          rgba(0, 113, 227, 0.08),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 8%,
+          rgba(110, 92, 230, 0.08),
+          transparent 25%
+        ),
+        var(--background);
+
+      line-height: 1.5;
+      letter-spacing: -0.012em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    section {
+      scroll-margin-top: 92px;
+    }
+
+    .container {
+      width: min(calc(100% - 40px), var(--container));
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(245, 245, 247, 0.78);
+      backdrop-filter: saturate(180%) blur(22px);
+      -webkit-backdrop-filter: saturate(180%) blur(22px);
+
+      border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+    }
+
+    .nav-inner {
+      min-height: 64px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+
+      font-size: 14px;
+      color: #444448;
+    }
+
+    .nav-links a {
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      padding: 9px 16px;
+      background: var(--blue);
+      color: white !important;
+
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue-hover);
+    }
+
+    .mobile-toggle {
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border: 0;
+      border-radius: 50%;
+
+      background: rgba(255, 255, 255, 0.78);
+
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      padding: 86px 0 46px;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(300px, 0.6fr);
+
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-primary,
+    .hero-profile {
+      border-radius: var(--radius-xl);
+
+      border: 1px solid rgba(255, 255, 255, 0.72);
+
+      box-shadow: var(--shadow);
+
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+
+    .hero-primary {
+      padding: 58px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.94),
+          rgba(255, 255, 255, 0.7)
+        );
+    }
+
+    .availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: #30d158;
+
+      box-shadow:
+        0 0 0 5px rgba(48, 209, 88, 0.12);
+    }
+
+    .hero h1 {
+      margin: 26px 0 20px;
+
+      max-width: 920px;
+
+      font-size: clamp(52px, 7vw, 90px);
+      line-height: 0.96;
+
+      letter-spacing: -0.058em;
+      font-weight: 760;
+    }
+
+    .hero h1 span {
+      color: var(--text-secondary);
+    }
+
+    .hero-subtitle {
+      max-width: 820px;
+
+      margin: 0;
+
+      font-size: clamp(20px, 2.3vw, 28px);
+      line-height: 1.25;
+
+      color: #414145;
+
+      letter-spacing: -0.03em;
+    }
+
+    .hero-description {
+      max-width: 760px;
+
+      margin: 28px 0 0;
+
+      color: var(--text-secondary);
+
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      margin-top: 34px;
+    }
+
+    .button {
+      min-height: 48px;
+
+      padding: 0 20px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 999px;
+
+      border: 1px solid var(--border);
+
+      font-size: 15px;
+      font-weight: 650;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-dark {
+      background: var(--text);
+      color: white;
+    }
+
+    .button-light {
+      background: white;
+      color: var(--text);
+    }
+
+    .button-blue {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    /* =========================================================
+       HERO PROFILE CARD
+    ========================================================= */
+
+    .hero-profile {
+      padding: 34px;
+
+      background:
+        linear-gradient(
+          165deg,
+          rgba(255, 255, 255, 0.9),
+          rgba(255, 255, 255, 0.58)
+        );
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 28px;
+
+      color: white;
+
+      font-size: 32px;
+      font-weight: 750;
+
+      background:
+        linear-gradient(
+          145deg,
+          #007aff,
+          #5856d6 58%,
+          #af52de
+        );
+
+      box-shadow:
+        0 18px 38px rgba(0, 113, 227, 0.26);
+    }
+
+    .hero-profile h2 {
+      margin: 26px 0 4px;
+
+      font-size: 27px;
+      letter-spacing: -0.035em;
+    }
+
+    .profile-location {
+      margin: 0;
+      color: var(--text-secondary);
+    }
+
+    .profile-items {
+      margin-top: 30px;
+    }
+
+    .profile-item {
+      padding: 16px 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      border-top: 1px solid var(--border);
+
+      font-size: 14px;
+    }
+
+    .profile-item span {
+      color: var(--text-secondary);
+    }
+
+    .profile-item strong {
+      text-align: right;
+    }
+
+    /* =========================================================
+       GLOBAL SECTION STYLING
+    ========================================================= */
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 40px;
+    }
+
+    .eyebrow {
+      margin-bottom: 7px;
+
+      color: var(--blue);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+
+      max-width: 800px;
+
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.03;
+
+      font-weight: 730;
+      letter-spacing: -0.05em;
+    }
+
+    .section-heading p {
+      max-width: 480px;
+
+      margin: 0;
+
+      color: var(--text-secondary);
+
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       METRICS
+    ========================================================= */
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      gap: 14px;
+    }
+
+    .metric {
+      min-height: 170px;
+
+      padding: 26px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: 22px;
+
+      box-shadow: var(--shadow-sm);
+    }
+
+    .metric-number {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 38px;
+      font-weight: 740;
+
+      letter-spacing: -0.05em;
+    }
+
+    .metric-label {
+      color: var(--text-secondary);
+
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    /* =========================================================
+       EXPERTISE
+    ========================================================= */
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .capability-card {
+      min-height: 330px;
+
+      padding: 30px;
+
+      background: rgba(255, 255, 255, 0.84);
+
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 28px;
+
+      box-shadow: var(--shadow-sm);
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .capability-number {
+      color: var(--text-light);
+
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .capability-card h3 {
+      margin: 28px 0 12px;
+
+      font-size: 26px;
+
+      line-height: 1.1;
+
+      letter-spacing: -0.035em;
+    }
+
+    .capability-card p {
+      margin: 0;
+
+      color: var(--text-secondary);
+
+      line-height: 1.6;
+    }
+
+    .tags {
+      margin-top: auto;
+      padding-top: 28px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 8px 11px;
+
+      background: #f1f1f3;
+
+      border: 1px solid rgba(0, 0, 0, 0.04);
+
+      border-radius: 999px;
+
+      color: #444448;
+
+      font-size: 12px;
+      font-weight: 550;
+    }
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .experience-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .experience-card {
+      padding: 30px;
+
+      display: grid;
+      grid-template-columns: 235px minmax(0, 1fr);
+
+      gap: 34px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+      border-radius: 26px;
+
+      transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+
+    .experience-company {
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .experience-date,
+    .experience-location {
+      margin-top: 5px;
+
+      color: var(--text-secondary);
+
+      font-size: 14px;
+    }
+
+    .experience-content h3 {
+      margin: 0 0 8px;
+
+      font-size: 26px;
+      letter-spacing: -0.035em;
+    }
+
+    .experience-content > p {
+      margin: 0;
+
+      color: var(--text-secondary);
+
+      line-height: 1.6;
+    }
+
+    .experience-content ul {
+      margin: 18px 0 0;
+
+      padding-left: 20px;
+
+      color: #454549;
+    }
+
+    .experience-content li {
+      margin-bottom: 9px;
+
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       FEATURED CASE STUDY
+    ========================================================= */
+
+    .feature-card {
+      padding: 42px;
+
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+
+      gap: 38px;
+
+      border-radius: 36px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #111111,
+          #1b2432 48%,
+          #30235d
+        );
+
+      color: white;
+
+      box-shadow: var(--shadow);
+    }
+
+    .feature-card .eyebrow {
+      color: #8bc8ff;
+    }
+
+    .feature-card h2 {
+      margin: 10px 0 18px;
+
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: 1.04;
+
+      letter-spacing: -0.05em;
+    }
+
+    .feature-card p {
+      color: rgba(255, 255, 255, 0.72);
+
+      line-height: 1.65;
+    }
+
+    .feature-items {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+    }
+
+    .feature-item {
+      padding: 20px;
+
+      min-height: 140px;
+
+      background: rgba(255, 255, 255, 0.08);
+
+      border: 1px solid rgba(255, 255, 255, 0.12);
+
+      border-radius: 20px;
+
+      backdrop-filter: blur(12px);
+    }
+
+    .feature-item strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 16px;
+    }
+
+    .feature-item span {
+      color: rgba(255, 255, 255, 0.64);
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       TOOLS / CERTIFICATIONS
+    ========================================================= */
+
+    .skills-shell {
+      padding: 38px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 34px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+      border-radius: 32px;
+    }
+
+    .skills-block h3 {
+      margin: 0 0 18px;
+
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 9px;
+    }
+
+    .skill-pill {
+      padding: 10px 13px;
+
+      background: var(--background);
+
+      border: 1px solid var(--border);
+      border-radius: 999px;
+
+      font-size: 13px;
+    }
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 16px;
+    }
+
+    .education-card {
+      padding: 26px;
+
+      min-height: 210px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+      border-radius: 24px;
+    }
+
+    .education-year {
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    .education-card h3 {
+      margin: 26px 0 7px;
+
+      font-size: 21px;
+      letter-spacing: -0.025em;
+    }
+
+    .education-card p {
+      margin: 0;
+
+      color: var(--text-secondary);
+
+      line-height: 1.5;
+    }
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact-section {
+      padding: 74px 0 30px;
+    }
+
+    .contact-card {
+      padding: 55px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+
+      align-items: end;
+      gap: 30px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(255, 255, 255, 0.72)
+        );
+
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 36px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 {
+      margin: 0;
+
+      max-width: 780px;
+
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1;
+
+      letter-spacing: -0.055em;
+    }
+
+    .contact-card p {
+      max-width: 660px;
+
+      margin: 22px 0 0;
+
+      color: var(--text-secondary);
+
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      gap: 12px;
+    }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      padding: 34px 0 44px;
+
+      color: var(--text-light);
+
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      padding-top: 24px;
+
+      border-top: 1px solid var(--border);
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+
+      transition:
+        opacity 0.65s ease,
+        transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 980px) {
+
+      .hero-layout,
+      .feature-card,
+      .skills-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .expertise-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .experience-card {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .nav-inner {
+        min-height: 60px;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 60px;
+        left: 0;
+        right: 0;
+
+        padding: 22px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        background: rgba(245, 245, 247, 0.97);
+
+        border-bottom: 1px solid var(--border);
+
+        backdrop-filter: blur(20px);
+      }
+
+      .nav.open .nav-links {
+        display: flex;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .hero-primary {
+        padding: 34px 28px;
+      }
+
+      .hero-profile {
+        padding: 28px;
+      }
+
+      .hero h1 {
+        font-size: clamp(46px, 14vw, 68px);
+      }
+
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature-items {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        padding: 34px 28px;
+      }
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(calc(100% - 24px), var(--container));
+      }
+
+      .hero-primary,
+      .hero-profile,
+      .feature-card,
+      .contact-card {
+        border-radius: 28px;
+      }
+
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        min-height: auto;
+      }
+
+      .section {
+        padding: 46px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 22px;
+      }
+
+      .experience-card,
+      .capability-card,
+      .education-card {
+        padding: 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       NAV
+  ========================================================== -->
+
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+
+      <a href="#top" class="brand">
+        Priyanka Padhi
+      </a>
+
+      <button
+        class="mobile-toggle"
+        aria-label="Toggle navigation"
+        onclick="document.getElementById('nav').classList.toggle('open')"
+      >
+        ☰
+      </button>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main id="top">
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="hero">
+      <div class="container hero-layout">
+
+        <div class="hero-primary reveal">
+
+          <div class="availability">
+            <span class="availability-dot"></span>
+            Business • Product • Transformation
+          </div>
+
+          <h1>
+            Turning complexity
+            <span>into clarity.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Business Analyst, product-minded strategist and transformation
+            professional working at the intersection of business, data and
+            technology.
+          </p>
+
+          <p class="hero-description">
+            I translate complex business problems into intuitive processes,
+            actionable requirements and measurable outcomes. My experience
+            spans enterprise transformation, payments and risk, Salesforce,
+            data analytics, healthcare, financial services and AI product
+            management.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#experience" class="button button-dark">
+              Explore my work
+            </a>
+
+            <a
+              href="mailto:padhilibra@gmail.com"
+              class="button button-blue"
+            >
+              Get in touch
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/priyankapadhi8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-light"
+            >
+              LinkedIn ↗
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <aside class="hero-profile reveal">
+
+          <div>
+
+            <div class="avatar">
+              PP
+            </div>
+
+            <h2>Priyanka Padhi</h2>
+
+            <p class="profile-location">
+              Deerfield Beach, Florida
+            </p>
+
+          </div>
+
+
+          <div class="profile-items">
+
+            <div class="profile-item">
+              <span>Current</span>
+              <strong>Business Analyst Level 3</strong>
+            </div>
+
+            <div class="profile-item">
+              <span>Organization</span>
+              <strong>NextEra Energy</strong>
+            </div>
+
+            <div class="profile-item">
+              <span>Experience</span>
+              <strong>8+ years</strong>
+            </div>
+
+            <div class="profile-item">
+              <span>Core focus</span>
+              <strong>Analysis + Product + Data</strong>
+            </div>
+
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT / PROOF
+    ========================================================== -->
+
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <div class="eyebrow">Profile</div>
+
+            <h2>
+              Business thinking grounded in execution.
+            </h2>
+          </div>
+
+          <p>
+            I combine business analysis, process optimization,
+            stakeholder management and analytics to help teams move from
+            ambiguous problems to structured, scalable solutions.
+          </p>
+
+        </div>
+
+
+        <div class="metrics">
+
+          <div class="metric reveal">
+            <span class="metric-number">8+</span>
+            <span class="metric-label">
+              Years across business analysis, transformation and project delivery.
+            </span>
+          </div>
+
+          <div class="metric reveal">
+            <span class="metric-number">$3M+</span>
+            <span class="metric-label">
+              Salesforce and data visualization initiatives supported.
+            </span>
+          </div>
+
+          <div class="metric reveal">
+            <span class="metric-number">500+</span>
+            <span class="metric-label">
+              User stories created for enterprise implementations.
+            </span>
+          </div>
+
+          <div class="metric reveal">
+            <span class="metric-number">$40K</span>
+            <span class="metric-label">
+              Monthly payment-processing savings identified through analysis.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         EXPERTISE
+    ========================================================== -->
+
+    <section class="section" id="expertise">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <div class="eyebrow">Expertise</div>
+
+            <h2>
+              Work organized around outcomes.
+            </h2>
+          </div>
+
+          <p>
+            Instead of presenting a long list of tools, this portfolio
+            groups my experience around the problems I help organizations solve.
+          </p>
+
+        </div>
+
+
+        <div class="expertise-grid">
+
+          <article class="capability-card reveal">
+
+            <span class="capability-number">01</span>
+
+            <h3>
+              Business & Product Analysis
+            </h3>
+
+            <p>
+              Turning stakeholder needs into clear requirements, workflows,
+              user stories, acceptance criteria and prioritized execution plans.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Requirements</span>
+              <span class="tag">User Stories</span>
+              <span class="tag">Process Mapping</span>
+              <span class="tag">JIRA</span>
+              <span class="tag">Confluence</span>
+              <span class="tag">Stakeholder Management</span>
+            </div>
+
+          </article>
+
+
+          <article class="capability-card reveal">
+
+            <span class="capability-number">02</span>
+
+            <h3>
+              Payments, Risk & Analytics
+            </h3>
+
+            <p>
+              Analyzing payment performance, transaction failures, fraud
+              behavior and operational metrics to improve reliability
+              and business outcomes.
+            </p>
+
+            <div class="tags">
+              <span class="tag">ACH</span>
+              <span class="tag">Card Payments</span>
+              <span class="tag">Risk Strategy</span>
+              <span class="tag">SQL</span>
+              <span class="tag">BigQuery</span>
+              <span class="tag">Power BI</span>
+            </div>
+
+          </article>
+
+
+          <article class="capability-card reveal">
+
+            <span class="capability-number">03</span>
+
+            <h3>
+              Enterprise Transformation
+            </h3>
+
+            <p>
+              Supporting migrations, operating-model change and technology
+              transformation through structured analysis, validation and
+              cross-functional coordination.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Data Migration</span>
+              <span class="tag">Salesforce</span>
+              <span class="tag">Agile</span>
+              <span class="tag">Governance</span>
+              <span class="tag">PRINCE2</span>
+              <span class="tag">Lean Six Sigma</span>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         EXPERIENCE
+    ========================================================== -->
+
+    <section class="section" id="experience">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <div class="eyebrow">Experience</div>
+
+            <h2>
+              A career across technology, data and transformation.
+            </h2>
+          </div>
+
+          <p>
+            The webpage intentionally highlights the most relevant
+            accomplishments rather than recreating a six-page résumé.
+          </p>
+
+        </div>
+
+
+        <div class="experience-list">
+
+
+          <!-- NextEra -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-company">
+                NextEra Energy, Inc.
+              </div>
+
+              <div class="experience-date">
+                March 2026 — Present
+              </div>
+
+              <div class="experience-location">
+                Juno Beach, Florida
+              </div>
+
+            </div>
+
+
+            <div class="experience-content">
+
+              <h3>
+                Business Analyst Level 3
+              </h3>
+
+              <p>
+                Enterprise business analysis supporting technology
+                transformation, stakeholder alignment and structured delivery.
+              </p>
+
+              <ul>
+                <li>
+                  Translate business needs into structured requirements,
+                  process flows and implementation-ready outcomes.
+                </li>
+
+                <li>
+                  Work across business and technical stakeholders to improve
+                  clarity, traceability and migration readiness.
+                </li>
+
+                <li>
+                  Support enterprise transformation initiatives through
+                  analysis, governance and cross-functional coordination.
+                </li>
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- CDF -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-company">
+                Community Dreams Foundation
+              </div>
+
+              <div class="experience-date">
+                October 2025 — March 2026
+              </div>
+
+              <div class="experience-location">
+                Florida, United States
+              </div>
+
+            </div>
+
+
+            <div class="experience-content">
+
+              <h3>
+                Business Analyst
+              </h3>
+
+              <ul>
+
+                <li>
+                  Structured a portfolio of 10+ finance-focused projects
+                  using real-world business and data problems.
+                </li>
+
+                <li>
+                  Defined objectives, data sources, deliverables,
+                  team structures and project roadmaps.
+                </li>
+
+                <li>
+                  Coordinated data engineering, analytics and
+                  machine-learning workstreams.
+                </li>
+
+                <li>
+                  Established reusable project templates and delivery
+                  standards across domains.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- FlexShopper -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-company">
+                FlexShopper
+              </div>
+
+              <div class="experience-date">
+                June 2025 — October 2025
+              </div>
+
+              <div class="experience-location">
+                Florida, United States
+              </div>
+
+            </div>
+
+
+            <div class="experience-content">
+
+              <h3>
+                Business Analyst — Billing & Payments
+              </h3>
+
+              <p>
+                Connected risk strategy, payment operations and systems
+                analysis within a fintech lease-to-own platform.
+              </p>
+
+              <ul>
+
+                <li>
+                  Analyzed ACH and card processing, reconciliation,
+                  failure recovery and retry workflows.
+                </li>
+
+                <li>
+                  Automated recurring SQL workflows, reducing processing
+                  time by approximately 50%.
+                </li>
+
+                <li>
+                  Identified non-performing payment methods, supporting
+                  approximately $40K per month in avoided processing cost.
+                </li>
+
+                <li>
+                  Investigated reversals, AVS/CVV mismatches,
+                  transaction failures and token inconsistencies.
+                </li>
+
+                <li>
+                  Created BigQuery datasets, Power BI metrics and
+                  executive-level reporting.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- Accenture -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-company">
+                Accenture
+              </div>
+
+              <div class="experience-date">
+                March 2017 — March 2022
+              </div>
+
+              <div class="experience-location">
+                Mumbai, India
+              </div>
+
+            </div>
+
+
+            <div class="experience-content">
+
+              <h3>
+                Senior Business Analyst Lead
+              </h3>
+
+              <ul>
+
+                <li>
+                  Worked with healthcare and retail banking clients
+                  across requirements, process improvement and analytics.
+                </li>
+
+                <li>
+                  Supported Salesforce and data visualization programs
+                  valued at more than $3M.
+                </li>
+
+                <li>
+                  Created 500+ JIRA user stories supporting enterprise
+                  business requirements.
+                </li>
+
+                <li>
+                  Supported Oracle-to-Salesforce migration through
+                  source-to-target mapping, transformation rules,
+                  validation and reconciliation.
+                </li>
+
+                <li>
+                  Contributed to AML risk-monitoring and transaction-analysis
+                  initiatives using SQL.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+          <!-- Earlier Career -->
+
+          <article class="experience-card reveal">
+
+            <div>
+
+              <div class="experience-company">
+                Cipla • Aragen • GSK • SAI Life Sciences
+              </div>
+
+              <div class="experience-date">
+                2014 — 2017
+              </div>
+
+              <div class="experience-location">
+                India
+              </div>
+
+            </div>
+
+
+            <div class="experience-content">
+
+              <h3>
+                Project Management & PMO
+              </h3>
+
+              <p>
+                Earlier career experience across pharmaceutical and
+                regulated environments, covering project planning,
+                governance, risk, scheduling and cross-functional execution.
+              </p>
+
+              <ul>
+
+                <li>
+                  Managed project schedules, milestones, risks and
+                  stage-gate governance.
+                </li>
+
+                <li>
+                  Coordinated R&D, quality, supply chain, manufacturing
+                  and regulatory stakeholders.
+                </li>
+
+                <li>
+                  Supported project portfolios for international clients
+                  and regulated delivery environments.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         AI PRODUCT MANAGEMENT
+    ========================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="feature-card reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Current Learning
+            </div>
+
+            <h2>
+              Building product intuition for the AI era.
+            </h2>
+
+            <p>
+              I am actively strengthening my AI Product Management
+              capabilities to understand how GenAI systems should be
+              designed, evaluated and integrated into real business workflows.
+            </p>
+
+          </div>
+
+
+          <div class="feature-items">
+
+            <div class="feature-item">
+              <strong>Context Engineering</strong>
+              <span>
+                Structuring the right information so language models
+                receive relevant, reliable context.
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <strong>RAG</strong>
+              <span>
+                Understanding retrieval-augmented generation for
+                dynamic and domain-specific knowledge.
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <strong>Prompting vs RAG vs Fine-tuning</strong>
+              <span>
+                Choosing an AI approach based on the underlying
+                product and data problem.
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <strong>AI Agents</strong>
+              <span>
+                Exploring tool-using LLM workflows, autonomous actions
+                and agent-oriented product experiences.
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <strong>LLM Evaluation</strong>
+              <span>
+                Measuring correctness, relevance, bias and output
+                quality using structured evaluation patterns.
+              </span>
+            </div>
+
+            <div class="feature-item">
+              <strong>AI Product Thinking</strong>
+              <span>
+                Connecting user problems, business value,
+                technical feasibility and responsible implementation.
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         TOOLS + CERTIFICATIONS
+    ========================================================== -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <div class="eyebrow">Toolkit</div>
+
+            <h2>
+              Tools are useful. Judgment matters more.
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="skills-shell reveal">
+
+          <div class="skills-block">
+
+            <h3>
+              Platforms & capabilities
+            </h3>
+
+            <div class="skills-grid">
+
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">BigQuery</span>
+              <span class="skill-pill">Power BI</span>
+              <span class="skill-pill">Tableau</span>
+              <span class="skill-pill">Salesforce</span>
+              <span class="skill-pill">JIRA</span>
+              <span class="skill-pill">Confluence</span>
+              <span class="skill-pill">Data Analytics</span>
+              <span class="skill-pill">Data Migration</span>
+              <span class="skill-pill">Process Modeling</span>
+              <span class="skill-pill">Risk Strategy</span>
+              <span class="skill-pill">AI Product Management</span>
+
+            </div>
+
+          </div>
+
+
+          <div class="skills-block">
+
+            <h3>
+              Certifications & professional learning
+            </h3>
+
+            <div class="skills-grid">
+
+              <span class="skill-pill">
+                Lean Six Sigma Black Belt
+              </span>
+
+              <span class="skill-pill">
+                Tableau Desktop Specialist
+              </span>
+
+              <span class="skill-pill">
+                PRINCE2 Practitioner
+              </span>
+
+              <span class="skill-pill">
+                Agile, Scrum Master & JIRA
+              </span>
+
+              <span class="skill-pill">
+                Software Design with UML
+              </span>
+
+              <span class="skill-pill">
+                Management Consulting
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         EDUCATION
+    ========================================================== -->
+
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div>
+            <div class="eyebrow">Education</div>
+
+            <h2>
+              Business foundation. Technology depth.
+            </h2>
+          </div>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+          <div class="education-card reveal">
+
+            <div class="education-year">
+              2023 — 2025
+            </div>
+
+            <h3>
+              Florida International University
+            </h3>
+
+            <p>
+              Master of Science in Information Systems
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-year">
+              2012 — 2014
+            </div>
+
+            <h3>
+              IBS Hyderabad
+            </h3>
+
+            <p>
+              Master of Business Administration
+              <br />
+              Marketing Management
+            </p>
+
+          </div>
+
+
+          <div class="education-card reveal">
+
+            <div class="education-year">
+              2009 — 2012
+            </div>
+
+            <h3>
+              University of Mumbai
+            </h3>
+
+            <p>
+              Bachelor of Management Studies
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================== -->
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+
+        <div class="contact-card reveal">
+
+          <div>
+
+            <div class="eyebrow">
+              Let's connect
+            </div>
+
+            <h2>
+              Interested in solving something complex?
+            </h2>
+
+            <p>
+              I enjoy working on transformation initiatives where
+              business needs, technology, data and user experience
+              need to come together clearly.
+            </p>
+
+          </div>
+
+
+          <div class="contact-links">
+
+            <a
+              href="mailto:padhilibra@gmail.com"
+              class="button button-blue"
+            >
+              Email me
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/priyankapadhi8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-light"
+            >
+              LinkedIn ↗
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+    <div class="container footer-inner">
+
+      <span>
+        © <span id="year"></span> Priyanka Padhi
+      </span>
+
+      <span>
+        Business Analysis • Product • Data • Transformation
+      </span>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       All inside this single HTML file.
+  ========================================================== -->
+
+  <script>
+
+    /* Current year */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* Smooth mobile nav close */
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          document
+            .getElementById("nav")
+            .classList
+            .remove("open");
+
+        });
+
+      });
+
+
+    /* Reveal-on-scroll interaction */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        function(entries) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target
+                .classList
+                .add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.08
+        }
+      );
+
+    revealElements.forEach(function(element) {
+      observer.observe(element);
+    });
+
+
+    /* Immediately show first hero content */
+
+    window.addEventListener("load", function() {
+
+      document
+        .querySelectorAll(".hero .reveal")
+        .forEach(function(element, index) {
+
+          setTimeout(function() {
+            element.classList.add("visible");
+          }, index * 120);
+
+        });
+
+    });
+
+  </script>
+
+</body>
+</html>
